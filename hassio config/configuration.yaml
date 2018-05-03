@@ -1,0 +1,64 @@
+light:
+  - platform: mqtt_json
+    name: "LEDSTRIP"
+    state_topic: "pdsproject/office/ledstrip"
+    command_topic: "pdsproject/office/ledstrip/set"
+    effect: true
+    effect_list:
+      - static  
+      - blink  
+      - breath  
+      - color wipe  
+      - color wipe random  
+      - random color  
+      - easter  
+      - dynamic  
+      - rainbow  
+      - rainbow cycle  
+      - scan  
+      - dual scan  
+      - fade  
+      - theater chase  
+      - theater chase rainbow  
+      - running lights  
+      - twinkle  
+      - twinkle random  
+      - twinkle fade  
+      - twinkle fade random  
+      - sparkle  
+      - flash sparkle  
+      - hyper sparkle  
+      - strobe  
+      - strobe rainbow  
+      - multi strobe  
+      - blink rainbow  
+      - android  
+      - chase color  
+      - chase random  
+      - chase rainbow  
+      - chase flash  
+      - chase flash random  
+      - chase rainbow white  
+      - colorful  
+      - traffic light  
+      - color sweep random  
+      - running color  
+      - larson scanner  
+      - comet  
+      - fireworks  
+      - fireworks random  
+      - merry christmas  
+      - fire flicker  
+      - gradient  
+      - loading  
+      - circus combustus  
+    brightness: true
+    flash: true
+    rgb: true
+    optimistic: false
+    qos: 0
+
+binary_sensor:
+  - platform: mqtt
+    name: "PIR"
+    state_topic: "pdsproject/office/pir"
